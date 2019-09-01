@@ -1,0 +1,39 @@
+﻿@model StudentManagement.Models.Student
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>Student Login Page</h2>
+    <p></p>
+
+    <table>
+        <tr>
+
+            <td>
+                @Html.LabelFor(model => model.first_name)
+                @Html.TextBoxFor(model => model.first_name)
+            </td>
+
+        </tr>
+         <tr>
+
+            <td>
+                @Html.LabelFor(model => model.Password)
+                @Html.TextBoxFor(model => model.Password)
+            </td>
+
+        </tr>
+
+    </table>
+
+    <div class="form-group">
+        <div class="focus">
+            <input type="submit" value="Login" class="btn btn-default" onclick="location.href='@Url.Action("Index", "Students")'" />
+          
+        </div>
+    </div>
+</div>
+
+
